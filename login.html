@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martoh Rentals - Login/Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body"> 
+     
+    <header class="header">
+       <h1>Roxanne House hunting Web</h1>
+       <nav class="nav1">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+       </nav>
+    </header>
+
+
+<main>
+
+    <!-- Login Form-->
+     <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginform" class="login-form">
+            <input id="email" type="text" name="email" placeholder="Email" required><br><br>
+            <input id="password" type="password" name="password" placeholder="Password" required><br><br>
+            <button class="btn" type="submit"><b>Login</b></button>
+        </form><br>
+        <p id="loginMessage"></p>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+</main>
+
+
+<main>
+    <!-- Register Form -->
+    <form id="registerForm" class="auth-form" action="index.html" method="post" style="display: none;">
+        <h2>Register</h2>
+        <label for="regUsername">Username</label>
+        <input type="text" id="regUsername" name="username" placeholder="Enter your username" required>
+
+        <label for="regEmail">Email</label>
+        <input type="email" id="regEmail" name="email" placeholder="Enter your email" required>
+
+        <label for="regPassword">Password</label>
+        <input type="password" id="regPassword" name="password" placeholder="Enter your password" required>
+
+        <label for="regConfirmPassword">Confirm Password</label>
+        <input type="password" id="regConfirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+
+<footer>
+    Developed with love by Stacy Otieno
+</footer>
+
+</body>
+</html>
+
+
+      
+
+       
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+
+    <header class="header">
+        <h1>Roxanne House hunting web</h1>
+        <nav class="nav1">
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+
+    <main>
+         <!-- Register Form -->
+        <div class="register-box">
+        <h2>Register</h2>
+        <form id="registerForm" class="register-form">
+            <input id="fullname" type="text" name="fullname" placeholder="Enter your username" required><br><br>
+            <input id="email"type="email" name="email" placeholder="Enter your email" required><br><br>
+            <input id="password" type="Password" name="password" placeholder="Enter your password" required><br><br>
+            <input id="password" id="ConfirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            <button class="btn" type="submit"><b>Register</b></button>
+    </form><br>
+    <p id="registerMessage"></p>
+    <p>Already have an account?<a href="login.html">Login here</a></p>
+        </div>
+    </main>
+<script>
+function showForm(formType) {
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const loginTab = document.getElementById('loginTab');
+    const registerTab = document.getElementById('registerTab');
+
+    if(formType === 'login') {
+        loginForm.style.display = 'block';
+        registerForm.style.display = 'none';
+        loginTab.classList.add('active');
+        registerTab.classList.remove('active');
+    } else {
+        loginForm.style.display = 'none';
+        registerForm.style.display = 'block';
+        loginTab.classList.remove('active');
+        registerTab.classList.add('active');
+    }
+}
+</script>
+
+<footer>
+    Developed with love by Stacy Otieno
+</footer>
+
+</body>
+</html>
