@@ -13,6 +13,7 @@
        <nav class="nav1">
             <a href="login.html">Login</a>
             <a href="register.html">Register</a>
+            <a href="index.html">Home</a>
        </nav>
     </header>
 
@@ -56,7 +57,23 @@
     Developed with love by Stacy Otieno
 </footer>
 
-<script src="script.js"></script>
+<script>
+    // Toggle between login and register forms
+    const loginForm = document.getElementById('loginform');
+    const registerForm = document.getElementById('registerForm');
+
+    // Example toggle function (you can implement actual toggling logic as needed)
+    function showRegisterForm() {
+        loginForm.style.display = 'none';
+        registerForm.style.display = 'block';
+    }
+
+    function showLoginForm() {
+        registerForm.style.display = 'none';
+        loginForm.style.display = 'block';
+    }
+
+</script>
 
 </body>
 </html>

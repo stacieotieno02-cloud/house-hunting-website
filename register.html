@@ -33,30 +33,36 @@
         </div>
     </main>
 <script>
-function showForm(formType) {
-    const loginForm = document.getElementById('loginForm');
-    const registerForm = document.getElementById('registerForm');
-    const loginTab = document.getElementById('loginTab');
-    const registerTab = document.getElementById('registerTab');
 
-    if(formType === 'login') {
-        loginForm.style.display = 'block';
-        registerForm.style.display = 'none';
-        loginTab.classList.add('active');
-        registerTab.classList.remove('active');
-    } else {
-        loginForm.style.display = 'none';
-        registerForm.style.display = 'block';
-        loginTab.classList.remove('active');
-        registerTab.classList.add('active');
-    }
+    const registerForm = document.getElementById('registerForm');
+    const registerMessage = document.getElementById('registerMessage');
+
+    registerForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const fullname = document.getElementById('fullname').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('ConfirmPassword').value;
+
+        if (password !== confirmPassword) {
+            registerMessage.textContent = 'Passwords do not match.';
+            registerMessage.style.color = 'red';
+            return;
+        }
+
+        // Simulate successful registration
+        registerMessage.textContent = 'Registration successful! You can now log in.';
+        registerMessage.style.color = 'green';
+
+        // Clear the form
+        registerForm.reset();
+    });
 }
 </script>
 
 <footer>
     Developed with love by Stacy Otieno
 </footer>
-
-<script src="script.js"></script>
 </body>
 </html>
